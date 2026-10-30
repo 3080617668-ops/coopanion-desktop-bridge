@@ -1,0 +1,8 @@
+node_modules/
+.bridge-state/
+coverage/
+*.log
+.tool-cache/
+.acceptance/
+.publish/
+*.png

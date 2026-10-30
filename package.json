@@ -1,0 +1,17 @@
+{
+  "name": "coopanion-desktop-bridge-dev",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.28.6",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "pnpm --filter cortico-world-desktop-bridge typecheck",
+    "build": "node scripts/build.mjs",
+    "connector": "node packages/connector/src/main.mjs",
+    "start": "node scripts/service.mjs start",
+    "stop": "node scripts/service.mjs stop",
+    "doctor": "node scripts/doctor.mjs"
+  },
+  "devDependencies": { "vitest": "^2.1.8", "esbuild": "^0.25.0", "ws": "^8.18.0" }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "cortico-world-desktop-bridge",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "Coopanion 与 ChatGPT/Codex 桌面端的本机文字桥接，无语音。",
+  "license": "MIT",
+  "keywords": [
+    "cortico-world",
+    "cortico"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@11.28.6",
+  "main": "./dist/index.js",
+  "cortico": {
+    "kind": "world",
+    "api": 6,
+    "tags": [],
+    "describe": "describe.json",
+    "displayName": "桌面文字桥接",
+    "webUiClient": "dist/webui.js"
+  },
+  "files": [
+    "src",
+    "dist",
+    "LICENSE",
+    "LICENSE.ws",
+    "THIRD_PARTY_NOTICES.md",
+    "README.md",
+    "CHANGELOG.md",
+    "describe.json"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.web.json",
+    "build": "node ../../scripts/build.mjs",
+    "describe:extension": "tsx scripts/describe.ts --write",
+    "check:extension": "tsx scripts/describe.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "coopanion-connector-desktop": "workspace:*",
+    "@types/node": "^22.10.0",
+    "cortico": "^0.2.10",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
